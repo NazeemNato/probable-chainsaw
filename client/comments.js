@@ -10,18 +10,11 @@ async function fetchComments() {
     return comments
 }
 
-// since not name from api
-function randomName() {
-    let firstName = ["John", "Jane", "Mary", "Bob", "Tom", "Sam", "Jack", "Lily", "Linda", "Sally", "Sue", "Sara", "Sebastian", "Sophie", "Sofia"]
-    let lastName = ["Peters", "Smith", "Jones", "Williams", "Brown", "Davis", "Miller", "Wilson", "Moore", "Taylor", "Anderson", "Thomas", "Jackson", "White", "Harris"]
-    return firstName[Math.floor(Math.random() * firstName.length)] + " " + lastName[Math.floor(Math.random() * lastName.length)]
-}
-
 export default function Comment(comment, i) {
     return `
      <div class="nested-comments-${i}">
       <p class="header">
-       <b>${randomName()}</b> .  <i>${timeago(comment.createdAt)} </i>
+       <b>${comment?.name}</b> .  <i>${timeago(comment.createdAt)} </i>
       </p>
       <p class="content">
       ${comment.text}

@@ -13,6 +13,7 @@ datasource db {
 
 model Comments {
   id        String        @id @default(uuid())
+  name      String
   text      String
   parent_id String?
   upvotes   Int        @default(0)
