@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+html, 
+body {
+  padding: 0;
+  margin: 8px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+  flex: 0 0 auto;
+}
+
+button {
+  background-color: darkviolet;
+  border-radius: 4px;
+  color: white;
+  padding: 8px;
+  margin: 5px 0;
+  border: none;
+  cursor: pointer;
+}
+
+.comment-input {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid rgb(229, 229, 229);
+  margin: 1em 0;
+  padding: 0;
+}
+
+
+.nested-comments-1 {
+  margin-bottom: 1em;
+}
+
+.nested-comments-2 {
+  margin-left: 2em;
+  margin-bottom: 0.5em;
+  margin-top: 0.3em;
+  padding-top: 0.5em;
+  padding-left: 0.75em;
+}
+
+.nested-comments-3 {
+  margin-left: 3em;
+  margin-bottom: 0.5em;
+  margin-top: 0.3em;
+  padding-top: 0.3em;
+  padding-left: 0.75em;
+}
+
+.header{ 
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.content {
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  color: #6b6a6a;
+}
+
+.row.buttons { 
+  margin: 0;
+  font-size: 0.75rem;
+  display: flex;
+}
+
+.reply-button {
+  margin-left: 30px;
+}
+
+a {
+  text-decoration: none;
+}
