@@ -18,10 +18,11 @@ body {
   flex: 0 0 auto;
 }
 
-button {
+.comment-button {
   background-color: darkviolet;
   border-radius: 4px;
   color: white;
+  margin-left: 30px;
   padding: 8px;
   margin: 5px 0;
   border: none;
@@ -29,10 +30,10 @@ button {
 }
 
 .comment-input {
-  width: 90%;
-  margin-right: auto;
-  margin-left: auto;
+  width: 80%;
   margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding: 5px;
 }
 
@@ -73,7 +74,7 @@ hr {
 
 .content {
   font-size: 0.8rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
   color: #6b6a6a;
 }
 
@@ -85,8 +86,15 @@ hr {
 
 .reply-button {
   margin-left: 30px;
+  cursor: pointer;
+  color: darkviolet;
 }
 
 a {
   text-decoration: none;
+}
+
+.upvote-button {
+  cursor: pointer;
+  color: darkviolet;
 }

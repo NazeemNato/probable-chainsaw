@@ -1,4 +1,4 @@
-import './style.css'
+import './src/style.css'
 import Comment from './comments.js';
 async function fetchComments() {
   const response = await fetch("https://cautious-spork-backend.nazeemnato.repl.co/api")

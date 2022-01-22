@@ -1,6 +1,12 @@
 import { Request, Response } from "express";
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
+// name
+function randomName(): string {
+    let firstName = ["John", "Jane", "Mary", "Bob", "Tom", "Sam", "Jack", "Lily", "Linda", "Sally", "Sue", "Sara", "Sebastian", "Sophie", "Sofia"]
+    let lastName = ["Peters", "Smith", "Jones", "Williams", "Brown", "Davis", "Miller", "Wilson", "Moore", "Taylor", "Anderson", "Thomas", "Jackson", "White", "Harris"]
+    return firstName[Math.floor(Math.random() * firstName.length)] + " " + lastName[Math.floor(Math.random() * lastName.length)]
+}
 // create comment
 const createComment = async (req: Request, res: Response) => {
     try {
@@ -15,6 +21,7 @@ const createComment = async (req: Request, res: Response) => {
         await prisma.comments.create({
             data: {
                 text: comment.trim(),
+                name: randomName()
             }
         })
         // return response
@@ -114,7 +121,8 @@ const replyToComment = async (req: Request, res: Response) => {
         await prisma.comments.create({
             data: {
                 text: reply.trim(),
-                parent_id: commentId
+                parent_id: commentId,
+                name: randomName()
             }
         })
         // return response

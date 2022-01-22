@@ -8,11 +8,11 @@ generator client {
 datasource db {
   provider             = "postgres"
   url                  = env("DATABASE_URL")
-
 }
 
 model Comments {
   id        String        @id @default(uuid())
+  name      String
   text      String
   parent_id String?
   upvotes   Int        @default(0)
